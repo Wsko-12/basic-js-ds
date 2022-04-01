@@ -31,7 +31,11 @@ function removeKFromList(l, k) {
             //if first in list
             l = current.next;
             prev = current.next;
-            current = current.next.next;
+            if(current.next){
+              current = current.next.next;
+            }else{
+              current = null;
+            };
         }else{
             //delete link in prev and switch current to left
             prev.next = current.next;
